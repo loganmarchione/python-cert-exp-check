@@ -18,7 +18,7 @@ with open('hosts.txt') as file:
 
 def ssl_get_cert(h: str, p: int) -> bytes:
     '''
-    Takes in host and port, returns certificate information as dict
+    Takes in host and port, returns certificate information as bytes
 
     Parameters:
         h (str):    Host to check (can be a hostname or IP address)

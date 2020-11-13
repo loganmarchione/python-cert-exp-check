@@ -6,6 +6,7 @@ Check expiration dates of SSL/TLS certificates.
 
   - This is a Python3 script that checks a provided list of `host:port` combinations for expired SSL/TLS certificates.
   - I use this in my homelab to check expiration for certificates generated with the [Smallstep CA](https://smallstep.com/certificates/).
+  - Works on self-signed as well as expired certificates.
 
 ## Requirements
 
@@ -15,6 +16,7 @@ Check expiration dates of SSL/TLS certificates.
 github.com:443
 1.1.1.1:443
 google.com:443
+expired.badssl.com:443
 ```
 
 ### Example usage
@@ -33,13 +35,14 @@ deactivate
 
 Below is the output generated.
 ```
-+------------+------+---------------------+------------------+
-| Host       | Port | Expiration date     | Day(s) remaining |
-+------------+------+---------------------+------------------+
-| google.com | 443  | 2021-01-20 16:18:36 | 68               |
-| 1.1.1.1    | 443  | 2021-02-01 12:00:00 | 79               |
-| github.com | 443  | 2022-05-10 12:00:00 | 542              |
-+------------+------+---------------------+------------------+
++--------------------+------+---------------------+------------------+
+| Host               | Port | Expiration date     | Day(s) remaining |
++--------------------+------+---------------------+------------------+
+| expired.badssl.com | 443  | 2015-04-12 23:59:59 | -2042            |
+| google.com         | 443  | 2021-01-20 16:18:36 | 68               |
+| 1.1.1.1            | 443  | 2021-02-01 12:00:00 | 79               |
+| github.com         | 443  | 2022-05-10 12:00:00 | 542              |
++--------------------+------+---------------------+------------------+
 ```
 
 ## TODO
