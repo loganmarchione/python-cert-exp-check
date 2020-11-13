@@ -1,0 +1,2 @@
+cryptography==3.2.1
+prettytable==1.0.1
