@@ -1,6 +1,6 @@
 # python-cert-exp-check
 
-Check expiration dates of certificates.
+Check expiration dates of SSL/TLS certificates.
 
 ## Explanation
 
@@ -11,6 +11,11 @@ Check expiration dates of certificates.
 
   - Setup a Python virtual environment
   - Edit the file called `hosts.txt` to include a list of `host:port` combinations, one per line.
+```
+github.com:443
+1.1.1.1:443
+google.com:443
+```
 
 ### Example usage
 
@@ -39,5 +44,5 @@ Below is the output generated.
 
 ## TODO
 - [ ] Build Flask app to show results on a web page
-- [ ] Add argument for to specify input file
+- [ ] Add argument to specify input file
 - [ ] Add the ability to check a local directory for crt/key files
