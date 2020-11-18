@@ -28,6 +28,7 @@ cd python-cert-exp-check
 python3 -m venv env
 source env/bin/activate 
 pip3 install -r requirements.txt
+mv hosts.txt.sample hosts.txt
 # Edit the hosts.txt file
 python3 certcheck.py
 deactivate
@@ -47,5 +48,5 @@ Below is the output generated.
 
 ## TODO
 - [ ] Build Flask app to show results on a web page
-- [ ] Add argument to specify input file
+- [x] ~~Add argument to specify input file~~
 - [ ] Add the ability to check a local directory for crt/key files

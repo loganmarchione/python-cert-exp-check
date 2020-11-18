@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 
 import datetime
+import os
+import sys
 import ssl
 import socket
 from cryptography import x509
@@ -11,8 +13,19 @@ now = datetime.datetime.utcnow()
 
 print("#####\nScript starting!\n#####")
 print("STATE: Reading input file at", now)
+if len(sys.argv) <= 1:
+    print('Please include a path to a text file for input\n  Example: certcheck.py /path/to/file')
+    sys.exit(1)
+
+path = sys.argv[1]
+if os.path.exists(path):
+    print("STATE: File exists at", path)
+else:
+    print("ERROR: File does not exist at", path)
+    sys.exit(1)
+
 array = []
-with open('hosts.txt') as file:
+with open(path) as file:
     array = file.read().splitlines()
 
 

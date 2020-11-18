@@ -1,4 +1,0 @@
-github.com:443
-1.1.1.1:443
-google.com:443
-expired.badssl.com:443
