@@ -11,7 +11,7 @@ Check expiration dates of SSL/TLS certificates.
 ## Requirements
 
   - Setup a Python virtual environment
-  - Edit the file called `hosts.txt` to include a list of `host:port` combinations, one per line.
+  - Edit a file to include a list of `host:port` combinations, one per line.
 ```
 github.com:443
 1.1.1.1:443
