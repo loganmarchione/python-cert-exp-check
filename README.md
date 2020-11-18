@@ -30,7 +30,7 @@ source env/bin/activate
 pip3 install -r requirements.txt
 mv hosts.txt.sample hosts.txt
 # Edit the hosts.txt file
-python3 certcheck.py
+python3 certcheck.py ./hosts.txt
 deactivate
 ```
 
